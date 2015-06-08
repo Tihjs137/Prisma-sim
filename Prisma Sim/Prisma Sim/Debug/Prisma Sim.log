@@ -1,8 +1,10 @@
-﻿Build started 8-6-2015 15:38:58.
+﻿Build started 8-6-2015 18:41:54.
      1>Project "D:\Github\Prisma-sim\Prisma Sim\Prisma Sim\Prisma Sim.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
          D:\visual studio\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /MP /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MDd /GS /arch:SSE2 /fp:fast /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Game.cpp
          Game.cpp
+     1>d:\github\prisma-sim\prisma sim\prisma sim\triangle.h(23): warning C4244: 'initializing' : conversion from 'float' to 'int', possible loss of data
+     1>d:\github\prisma-sim\prisma sim\prisma sim\triangle.h(26): warning C4244: 'initializing' : conversion from 'float' to 'int', possible loss of data
        Link:
          D:\visual studio\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\Github\Prisma-sim\Prisma Sim\Debug\Prisma Sim.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\Github\Prisma-sim\Prisma Sim\Debug\Prisma Sim.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\Github\Prisma-sim\Prisma Sim\Debug\Prisma Sim.lib" /MACHINE:X86 Debug\D3DGraphics.obj
          Debug\Game.obj
@@ -17,4 +19,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:01.95
+Time Elapsed 00:00:01.73

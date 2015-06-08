@@ -26,6 +26,7 @@
 #include "Sound.h"
 #include "Timer.h"
 #include "FrameTimer.h"
+#include "triangle.h"
 
 class Game
 {
@@ -46,7 +47,7 @@ private:
 	DSound audio;
 	/********************************/
 	/*  User Variables              */
-	
+	triangle triangle;
 	/********************************/
 	void UpdateModel();
 };

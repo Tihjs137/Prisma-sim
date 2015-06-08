@@ -26,6 +26,7 @@ Game::Game( HWND hWnd,KeyboardServer& kServer,const MouseServer& mServer )
 	kbd( kServer ),
 	mouse( mServer )
 {
+	triangle.create({ 100, 100 }, 0);
 }
 
 Game::~Game()
@@ -42,9 +43,34 @@ void Game::Go()
 
 void Game::UpdateModel( )
 {
+	if (kbd.KeyIsPressed(187))
+		triangle.scale(1.1);
+	if (kbd.KeyIsPressed(189))
+		triangle.scale(0.9);
+
+	//selection
+	Vec2 MousePos = { (float)mouse.GetMouseX(), (float)mouse.GetMouseY() };
+	triangle.updateBounderies();
+	if (triangle.upperleft.y < MousePos.y && MousePos.y < triangle.downRight.y && triangle.upperleft.x < MousePos.x && MousePos.x < triangle.downRight.x)
+	{
+		triangle.IsHighLighted = true;
+		if (mouse.LeftIsPressed())
+		{
+			triangle.IsSelected = true;
+		}
+	}
+	else
+	{
+		triangle.IsHighLighted = false;
+	}
+	if (triangle.IsSelected)
+		triangle.Update(MousePos);
+	if (mouse.RightIsPressed())
+		triangle.IsSelected = false;
+
 }
 
 void Game::ComposeFrame()
 {
-	
+	triangle.draw(gfx);
 }
